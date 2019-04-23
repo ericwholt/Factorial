@@ -70,15 +70,21 @@ namespace Factorial
             Console.WriteLine("You must enter a number between 0 and 10");
             return true;
         }
+
+        /// <summary>
+        /// Function calculates factorial
+        /// </summary>
+        /// <param name="factorial">int from 1 to 9</param>
+        /// <returns>factorial</returns>
         public static int CalculateFactorial(int factorial)
         {
-            if (factorial == 1)
+            if (factorial == 1)//No need for recursion for 1 and ends recursion when it reaches 1
             {
                 return 1;
             }
             else
             {
-                return factorial * CalculateFactorial(factorial - 1);
+                return factorial * CalculateFactorial(factorial - 1);//Start recursion till finished.
             }
         }
     }
